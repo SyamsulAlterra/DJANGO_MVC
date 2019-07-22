@@ -34,6 +34,9 @@ class Challenge(Materi):
     bobot_nilai=models.DecimalField('Bobot nilai', max_digits=2, decimal_places=1)
     mata_pelajaran=models.ForeignKey(MataPelajaran, on_delete=models.CASCADE)
 
-class LiveCode(Challenge):
+class LiveCode(Materi):
     tanggal_pelaksanaan=models.DateTimeField('Tanggal Pelaksanaan')
+    banyak_soal=models.IntegerField('Banyak soal')
+    bobot_nilai=models.DecimalField('Bobot nilai', max_digits=2, decimal_places=1)
+    mata_pelajaran=models.ForeignKey(MataPelajaran, on_delete=models.CASCADE)
 
