@@ -1,7 +1,12 @@
 from django.db import models
+from django.contrib import admin
 import datetime
 
 # Create your models here.
+
+class OrangAdmin(admin.ModelAdmin):
+    list_display=('id','nama','telp', 'alamat')
+
 class Orang(models.Model):
     nama=models.CharField(max_length=200)
     telp=models.CharField(max_length=12)
@@ -27,6 +32,9 @@ class Dokter(Orang):
 class Pasien(Orang):
     keluhan=models.TextField('Keluhan')
     tanggal_periksa=models.DateTimeField()
+
+class NonOrangAdmin(admin.ModelAdmin):
+    list_display=('id','nama')
 
 class Obat(models.Model):
     nama=models.CharField(max_length=200)

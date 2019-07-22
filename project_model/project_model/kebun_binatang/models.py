@@ -1,6 +1,10 @@
 from django.db import models
+from django.contrib import admin
 
-# Create your models here.
+class HewanAdmin(admin.ModelAdmin):
+    list_display=('id','nama')
+
+
 class Hewan(models.Model):
     nama=models.CharField(max_length=200)
     spesies=models.CharField(max_length=200)
@@ -12,11 +16,14 @@ class Hewan(models.Model):
 
 class Kandang(models.Model):
     nama=models.CharField(max_length=200)
-    isi_kandang=Hewan()
+    isi_kandang=models.TextField()
     luas_kandang=models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
         return self.nama
+
+class OrangAdmin(admin.ModelAdmin):
+    list_display=('id', 'nama', 'nomor_telepon')
 
 class Orang(models.Model):
     nama=models.CharField(max_length=200)

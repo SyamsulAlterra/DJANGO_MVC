@@ -1,7 +1,12 @@
 from django.db import models
+from django.contrib import admin
 import datetime
-
 # Create your models here.
+
+
+class OrangAdmin(admin.ModelAdmin):
+    list_display=('id','nama', 'nomor_telepon')
+
 class Orang(models.Model):
     nama=models.CharField(max_length=200)
     nomor_telepon=models.CharField('Nomor telepon',max_length=12)
@@ -15,6 +20,12 @@ class Direksi(Orang):
 class Mentee(Orang):
     nomor_absen=models.IntegerField('Nomor absen')
     nilai_rata_rata=models.DecimalField(max_digits=5, decimal_places=2)
+
+class MapelAdmin(admin.ModelAdmin):
+    list_display=('id','nama', 'jadwal_mulai', 'jadwal_berakhir')
+
+class ChallengeAdmin(admin.ModelAdmin):
+    list_display=('id','nama', 'banyak_soal', 'bobot_nilai')
 
 class Materi(models.Model):
     nama=models.CharField(max_length=200)

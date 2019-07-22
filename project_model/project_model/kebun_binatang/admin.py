@@ -1,9 +1,9 @@
 from django.contrib import admin
 from .models import *
 from django.apps import apps
-# Register your models here.
 
-app=apps.get_app_config('kebun_binatang')
 
-for model_name, model in app.models.items():
-    admin.site.register(model)
+admin.site.register(Hewan, HewanAdmin)
+admin.site.register(Kandang, HewanAdmin)
+admin.site.register(Penjaga, OrangAdmin)
+admin.site.register(Pengunjung, OrangAdmin)
