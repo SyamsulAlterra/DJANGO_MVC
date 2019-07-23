@@ -1,10 +1,9 @@
-#!/home/alta9/django/DJANGO_MVC/env_project_views/bin/python3
-
+#!/home/alta9/DJANGO_MVC/project_views/env_project_views/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
 
-from pip import main
+from pip._internal import main
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
