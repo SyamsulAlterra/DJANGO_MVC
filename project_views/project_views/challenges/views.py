@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .forms import *
 
 # Create your views here.
@@ -49,4 +49,8 @@ def input_article(request):
         form=data_article()
 
     return render(request, 'form_article.html', {'form':form} )
+
+def detail_blog(request, pk):
+    article=get_object_or_404(request, pk)
+    return render(request, 'detail_blog.html', {'article':article})
 

@@ -169,6 +169,14 @@ body .two, body .three{
 .author .bio li{
     padding: 10px 0px;
 }
+
+.table-pribadi td{
+    padding: 6px 0px;
+}
+
+.tab{
+    padding-left:250px !important;
+}
 /* author body */
 
 /* home body */
