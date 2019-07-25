@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block head %}
+<title>{{ pilihan.nama }}</title>
+{% endblock %}
+
+{% block body %}
+<div class="space">
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 aligncenter">
+            <p class="bold">{{ pilihan.nama }}</p>
+            <img src="{{ pilihan.foto.url }}" alt="">
+            <p>Harga : Rp. {{ pilihan.harga }}</p>
+            <p>{{ pilihan.deskripsi }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

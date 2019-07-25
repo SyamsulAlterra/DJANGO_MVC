@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block head %}
+<title>Tambah Barang</title>
+{% endblock %}
+
+{% block body %}
+<div class="space">
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 aligncenter">
+            <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                {{barang.as_p}}
+                <button type="submit">Tambah</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

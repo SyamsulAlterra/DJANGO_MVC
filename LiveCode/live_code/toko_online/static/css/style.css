@@ -1,0 +1,62 @@
+.aligncenter{
+    text-align: center;
+}
+
+.alignleft{
+    text-align: left;
+}
+
+.topHeader .aligncenter{
+    background-color: #3abdab;
+}
+
+.topHeader .alignleft{
+    background-color: rgb(130, 212, 223);
+}
+
+.rowHeader{
+    height: 30px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.black{
+    color:black;
+}
+
+.center-table{
+    padding-left: 480px;
+}
+
+td{
+    padding: 0px 20px;
+}
+
+tr{
+    margin: 50px 0px;
+}
+
+.space{
+    height: 20px;
+}
+
+.topHeader a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.topHeader a:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.white{
+    color: white;
+}
+
+
+

@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+
+{% block head %}
+<title>Homepage</title>
+{% endblock %}
+
+{% block body %}
+<div class="space">
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 aligncenter center-table">
+            <table class="table-bordered">
+                {% for barang in barangs %}
+                <tr>
+                    <td>
+                        <p class="bold">{{ barang.nama }}</p>
+                        <img src="{{ barang.foto.url }}" alt="">
+                        <p>Harga : Rp. {{ barang.harga }}</p>
+                        <p><a href="{% url 'detail barang' barang.id %}">{{ barang.link_detail }}</a></p>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="white">camouflage</div>
+        <div class="col-12 aligncenter">
+            <div class="space">
+                <a href="{% url 'tambah barang' %}" class="box"> tambah barang </a>
+            </div>
+        </div>
+        <div class="white">camouflage</div>
+    </div>
+</div>
+
+
+{% endblock %}
