@@ -1,0 +1,5 @@
+#!/home/alta9/django/home_directory/syamsul_book_env/bin/python3
+from django.core import management
+
+if __name__ == "__main__":
+    management.execute_from_command_line()

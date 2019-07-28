@@ -1,0 +1,41 @@
+/* global css */
+.aligncenter{
+    text-align: center;
+}
+
+.space-top{
+    padding-top: 10px;
+}
+
+.alignright{
+    text-align: right;
+}
+
+.display-inline li{
+    display: inline;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* end */
+
+/* header css */
+header {
+    background-color: brown;
+}
+/* end */
+
+/* footer css */
+footer {
+    background-color: grey;
+}
+/* end */

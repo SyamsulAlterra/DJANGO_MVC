@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+<title>Welcome Page</title>
+{% endblock %}
+
+{% block body %}
+<body class="welcome-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 aligncenter">
+                Welcome to myBook
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 aligncenter">
+                <a href="{% url 'sign in' %}">Sign in</a>
+            </div>
+            <div class="col-6 aligncenter">
+                <a href="{% url 'sign up' %}">Sign up</a>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

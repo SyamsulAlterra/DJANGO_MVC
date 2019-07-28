@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+{% block header %}
+<title>Sign up</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<form action="" method="POST" enctype="multipart/form-data" class="aligncenter">{% csrf_token %}
+    {{data.as_p}}
+    <button type="submit">Submit</button>
+</form>
+<br>
+{% endblock %}
